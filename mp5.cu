@@ -117,10 +117,10 @@ int main(int argc, char ** argv) {
   wbTime_stop(Copy, "Copying output memory to the CPU");
 
   wbTime_start(GPU, "Freeing GPU Memory");
-  wbCheck(cudaFree(deviceInput));
-  wbCheck(cudaFree(deviceOutput));
-  wbCheck(cudaFree(deviceScanFirstPass));
-  wbCheck(cudaFree(deviceScanSecondPass));
+    wbCheck(cudaFree(deviceInput));
+    wbCheck(cudaFree(deviceOutput));
+    wbCheck(cudaFree(deviceScanFirstPass));
+    wbCheck(cudaFree(deviceScanSecondPass));
   wbTime_stop(GPU, "Freeing GPU Memory");
 
   wbSolution(args, hostOutput, numElements);
